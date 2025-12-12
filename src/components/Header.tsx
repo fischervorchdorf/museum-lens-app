@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, HelpCircle } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 interface HeaderProps {
   onHelpClick?: () => void;
@@ -7,32 +7,36 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onHelpClick }) => {
   return (
-    <header className="bg-museum-charcoal text-white shadow-lg sticky top-0 z-50 print:hidden">
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <div className="flex items-center gap-3">
-          <div className="bg-museum-gold p-2 rounded-lg">
-            <Sparkles size={24} className="text-museum-charcoal" />
+    <header className="bg-museum-charcoal text-museum-paper py-6 px-6 shadow-lg border-b-4 border-museum-gold">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="p-3 bg-museum-gold rounded-xl text-museum-charcoal shadow-md">
+              <Sparkles size={32} strokeWidth={2.5} />
+            </div>
+            <div>
+              <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-wide">
+                Museum Lens
+              </h1>
+              <p className="text-sm text-museum-stone uppercase tracking-widest font-medium mt-1">
+                Artefakte erzählen ihre Geschichte
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-xl md:text-2xl font-serif font-bold tracking-wide">
-              Museum Lens
-            </h1>
-            <p className="text-xs text-museum-stone/80 uppercase tracking-widest">
-              Artefakte erzählen ihre Geschichte
-            </p>
-          </div>
+          {onHelpClick && (
+            <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg bg-museum-gold/10 border border-museum-gold/30">
+              <Sparkles size={18} className="text-museum-gold" />
+              <span className="text-sm text-museum-gold font-semibold">KI-Powered</span>
+            </div>
+          )}
         </div>
 
-        {onHelpClick && (
-          <button
-            onClick={onHelpClick}
-            className="flex items-center gap-2 px-3 py-2 bg-museum-gold/10 hover:bg-museum-gold/20 rounded-lg transition-colors border border-museum-gold/30"
-            aria-label="Hilfe"
-          >
-            <HelpCircle size={20} className="text-museum-gold" />
-            <span className="hidden sm:inline text-sm font-medium">Hilfe</span>
-          </button>
-        )}
+        {/* Subtitle */}
+        <div className="mt-4 text-center">
+          <p className="text-museum-stone text-sm italic">
+            "Entdecken Sie die Geschichte hinter dem Bild – ent schlüsseln Sie Ihre Schätze mit KI"
+          </p>
+        </div>
       </div>
     </header>
   );

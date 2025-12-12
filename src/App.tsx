@@ -96,14 +96,19 @@ const App: React.FC = () => {
 
         {appState === AppState.IDLE && (
           <div className="fade-in">
-            <div className="max-w-3xl mx-auto text-center py-12">
-              <h2 className="text-3xl md:text-4xl font-serif text-[#2d2a26] mb-4">
-                Entdecken Sie die Geschichte hinter dem Bild
+            <div className="max-w-3xl mx-auto text-center py-12 px-4">
+              <div className="inline-block px-4 py-2 border border-museum-gold/30 rounded-full bg-amber-50/50 mb-4">
+                <p className="text-museum-sage text-sm opacity-80 pl-4 border-l border-museum-sage/30">
+                  Ein KI-Experiment des Heimatvereins Vorchdorf (v5.1)
+                </p>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-serif text-museum-charcoal leading-tight mb-4">
+                Jedes Bild <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-amber-600 italic font-bold">
+                  erzählt eine Geschichte
+                </span>
               </h2>
-              <p className="text-museum-sage text-sm opacity-80 pl-4 border-l border-museum-sage/30">
-                Ein KI-Experiment des Heimatvereins Vorchdorf (v5.1)
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 Nutzen Sie modernste KI, um Details, historische Kontexte und Hintergründe Ihrer Museumsexponate oder privaten Fotos zu entschlüsseln.
               </p>
             </div>
