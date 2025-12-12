@@ -29,12 +29,7 @@ export const Header: React.FC<HeaderProps> = () => {
           </div>
         </div>
 
-        {/* Subtitle */}
-        <div className="mt-4 text-center">
-          <p className="text-museum-stone text-sm italic">
-            "Moderne Bildanalyse trifft auf historisches Wissen – entdecken Sie verborgene Details"
-          </p>
-        </div>
+
       </div>
     </header>
   );
