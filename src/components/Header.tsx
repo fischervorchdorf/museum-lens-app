@@ -5,7 +5,7 @@ interface HeaderProps {
   onHelpClick?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onHelpClick }) => {
+export const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="bg-museum-charcoal text-museum-paper py-6 px-6 shadow-lg border-b-4 border-museum-gold">
       <div className="max-w-6xl mx-auto">
@@ -23,18 +23,16 @@ export const Header: React.FC<HeaderProps> = ({ onHelpClick }) => {
               </p>
             </div>
           </div>
-          {onHelpClick && (
-            <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg bg-museum-gold/10 border border-museum-gold/30">
-              <Sparkles size={18} className="text-museum-gold" />
-              <span className="text-sm text-museum-gold font-semibold">KI-Powered</span>
-            </div>
-          )}
+          <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-museum-gold/10 border border-museum-gold/30">
+            <Sparkles size={18} className="text-museum-gold" />
+            <span className="text-sm text-museum-gold font-semibold">KI-Powered</span>
+          </div>
         </div>
 
         {/* Subtitle */}
         <div className="mt-4 text-center">
           <p className="text-museum-stone text-sm italic">
-            "Entdecken Sie die Geschichte hinter dem Bild – ent schlüsseln Sie Ihre Schätze mit KI"
+            "Moderne Bildanalyse trifft auf historisches Wissen – entdecken Sie verborgene Details"
           </p>
         </div>
       </div>
