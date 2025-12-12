@@ -99,8 +99,8 @@ const App: React.FC = () => {
             <div className="max-w-3xl mx-auto text-center py-12 px-4">
               <h2 className="text-4xl md:text-6xl font-serif text-museum-charcoal leading-tight mb-4">
                 Jedes Bild <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-amber-600 italic font-bold">
-                  erzählt eine Geschichte
+                <span className="text-museum-gold italic font-bold">
+                  hat eine Geschichte
                 </span>
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -163,7 +163,7 @@ const App: React.FC = () => {
           <p className="text-sm text-gray-700">
             &copy; {new Date().getFullYear()} Museum Lens • Powered by{' '}
             <span className="font-semibold text-museum-charcoal">Heimatverein Vorchdorf</span>
-            {' '}• Version 1.7
+            {' '}• Version 1.8
           </p>
           <p className="text-xs text-gray-600 mt-1">
             KI-gestützte Bildanalyse für Museumsexponate
