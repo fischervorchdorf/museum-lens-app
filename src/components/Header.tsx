@@ -1,36 +1,38 @@
 import React from 'react';
-import { Landmark, Camera, HelpCircle } from 'lucide-react';
+import { Sparkles, HelpCircle } from 'lucide-react';
 
 interface HeaderProps {
-  onHelpClick: () => void;
+  onHelpClick?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ onHelpClick }) => {
   return (
-    <header className="bg-[#2d2a26] text-[#fdfcf8] py-4 px-6 shadow-md border-b-4 border-[#c5a059] print:hidden">
-      <div className="max-w-5xl mx-auto flex items-center justify-between">
+    <header className="bg-museum-charcoal text-white shadow-lg sticky top-0 z-50 print:hidden">
+      <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#c5a059] rounded-lg text-[#2d2a26]">
-            <Landmark size={24} />
+          <div className="bg-museum-gold p-2 rounded-lg">
+            <Sparkles size={24} className="text-museum-charcoal" />
           </div>
           <div>
-            <h1 className="text-xl md:text-2xl font-bold tracking-wider serif">MUSEUM LENS</h1>
-            <p className="text-xs text-[#c5a059] uppercase tracking-widest font-medium">Digital Archivist AI</p>
+            <h1 className="text-xl md:text-2xl font-serif font-bold tracking-wide">
+              Museum Lens
+            </h1>
+            <p className="text-xs text-museum-stone/80 uppercase tracking-widest">
+              Artefakte erzählen ihre Geschichte
+            </p>
           </div>
         </div>
-        <div className="flex items-center gap-4">
-          <div className="hidden sm:flex items-center gap-2 text-sm text-gray-400">
-            <Camera size={16} />
-            <span>Image Analysis System</span>
-          </div>
-          <button 
+
+        {onHelpClick && (
+          <button
             onClick={onHelpClick}
-            className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-colors"
-            title="Installation Help"
+            className="flex items-center gap-2 px-3 py-2 bg-museum-gold/10 hover:bg-museum-gold/20 rounded-lg transition-colors border border-museum-gold/30"
+            aria-label="Hilfe"
           >
-            <HelpCircle size={20} />
+            <HelpCircle size={20} className="text-museum-gold" />
+            <span className="hidden sm:inline text-sm font-medium">Hilfe</span>
           </button>
-        </div>
+        )}
       </div>
     </header>
   );
