@@ -7,7 +7,10 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = () => {
   return (
-    <header className="bg-museum-charcoal text-museum-paper py-6 px-6 shadow-lg border-b-4 border-museum-gold">
+    <header
+      className="bg-museum-charcoal text-museum-paper py-6 px-6 shadow-lg"
+      style={{ borderBottom: '4px solid #C5A059' }}
+    >
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
