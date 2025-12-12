@@ -158,9 +158,16 @@ const App: React.FC = () => {
 
       </main>
 
-      <footer className="bg-white border-t border-gray-200 py-6 mt-auto print:hidden">
-        <div className="container mx-auto text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Museum Lens AI v1.1.0. Powered by Gemini.</p>
+      <footer className="bg-white border-t border-museum-stone/20 py-6 mt-auto print:hidden">
+        <div className="container mx-auto text-center">
+          <p className="text-sm text-gray-700">
+            &copy; {new Date().getFullYear()} Museum Lens • Powered by{' '}
+            <span className="font-semibold text-museum-charcoal">Heimatverein Vorchdorf</span>
+            {' '}• Version 1.5
+          </p>
+          <p className="text-xs text-gray-600 mt-1">
+            KI-gestützte Bildanalyse für Museumsexponate
+          </p>
         </div>
       </footer>
     </div>
