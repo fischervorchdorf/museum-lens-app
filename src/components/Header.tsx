@@ -23,7 +23,7 @@ export const Header: React.FC<HeaderProps> = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-museum-gold/10 border border-museum-gold/30">
+          <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg bg-museum-gold/10 border border-museum-gold/30">
             <Sparkles size={18} className="text-museum-gold" />
             <span className="text-sm text-museum-gold font-semibold">KI-Powered</span>
           </div>
