@@ -163,7 +163,7 @@ const App: React.FC = () => {
           <p className="text-sm text-gray-700">
             &copy; {new Date().getFullYear()} Museum Lens • Powered by{' '}
             <span className="font-semibold text-museum-charcoal">Heimatverein Vorchdorf</span>
-            {' '}• Version 1.5
+            {' '}• Version 1.6
           </p>
           <p className="text-xs text-gray-600 mt-1">
             KI-gestützte Bildanalyse für Museumsexponate
