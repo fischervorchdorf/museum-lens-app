@@ -1,0 +1,7 @@
+{
+  "name": "Museum Lens AI",
+  "description": "Advanced AI tool for museums to analyze historical images, providing detailed context, dating, and artistic analysis.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
