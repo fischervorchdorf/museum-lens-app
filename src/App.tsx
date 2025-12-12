@@ -85,7 +85,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fdfcf8] flex flex-col font-sans">
+    <div className="min-h-screen bg-museum-paper flex flex-col font-sans">
       <Header onHelpClick={() => setShowInstallGuide(true)} />
 
       {showInstallGuide && (
